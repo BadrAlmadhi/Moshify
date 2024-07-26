@@ -46,7 +46,7 @@ p {
   margin-top: 0;
 }
 
-/* stander break point */
+/* stander break point for desktop and laptop*/
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -58,6 +58,39 @@ p {
     font-size: 4rem;
   }
   h3 {
-    font-size: 2, 4rem;
+    font-size: 2.4rem;
   }
+}
+
+
+/* links */
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* add arrow after text content */
+.link-arrow::after {
+    content: '-->';
+    margin-left: 5px;
+    /* apply changes smoothly */
+    transition: margin 1.15s;
+}
+/* apply hover to targeted element inserted in ::after*/
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+/* media query of links in large screen */
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
 }
