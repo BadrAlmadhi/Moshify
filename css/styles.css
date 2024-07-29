@@ -62,7 +62,6 @@ p {
   }
 }
 
-
 /* links */
 
 a {
@@ -78,19 +77,56 @@ a {
 
 /* add arrow after text content */
 .link-arrow::after {
-    content: '-->';
-    margin-left: 5px;
-    /* apply changes smoothly */
-    transition: margin 1.15s;
+  content: "-->";
+  margin-left: 5px;
+  /* apply changes smoothly */
+  transition: margin 1.15s;
 }
 /* apply hover to targeted element inserted in ::after*/
 .link-arrow:hover::after {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 /* media query of links in large screen */
 @media screen and (min-width: 1024px) {
-    .link-arrow {
-        font-size: 1.5rem;
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  /* prevent badge to wrap in new line */
+  white-space: nowrap;
+}
+
+/* object oriented CSS */
+.badge--primary {
+    background-color: var(--color-primary);
+    color: aliceblue;
+}
+
+.badge--secondary {
+    background-color: var(--color-secondary);
+    color: aliceblue;
+}
+
+.badge--small {
+font-size: 1.6rem;
+}
+
+/* badges of large screen */
+@media screen and (min-width:1024px) {
+    .badge {
+      font-size: 1.5rem;
+    }
+
+    .badge--small {
+      font-size: 1.3rem;
     }
 }
