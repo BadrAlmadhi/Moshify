@@ -11,7 +11,9 @@
   --border-radius: 30px;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   /* make button and a tags align in same page */
   box-sizing: border-box;
 }
@@ -125,6 +127,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 /* badges of large screen */
@@ -267,16 +270,15 @@ a {
   }
 }
 
-
 /* inputs */
 
 .input {
-    border-radius: var(--border-radius);
-    border: 1px solid var(--color-border);
-    color: var(--color-headings);
-    font-size: 2rem;
-    outline: 0;
-    padding: 1.5rem 3.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
 }
 
 /* style place holder */
@@ -289,7 +291,6 @@ a {
   border-radius: var(--border-radius);
   /* add to control inline element */
   display: flex;
-
 }
 
 /* nesting if  input inside a group that input should not have a border*/
@@ -297,6 +298,7 @@ a {
   border: 0;
   /* use flex-grow to allow input take over the entire space */
   flex-grow: 1;
+  padding: 1.5rem 1rem;
 }
 
 /* control buttons inside input group */
@@ -307,5 +309,85 @@ a {
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
+  }
+}
+
+/* Cards */
+
+.card {
+  border-radius: 7px;
+  /* box-shadow:  Vertical, Horizontal, pluring shadow, how wide the shadow*/
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+/* BJC CSS */
+/* if we have a card primary the header should be.. */
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: white;
+}
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: white;
+}
+
+
+/* Plans */
+
+.plan__name {
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-top: 2rem;
+}
+
+/* font adjustment */
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
   }
 }
