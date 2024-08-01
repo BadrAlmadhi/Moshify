@@ -1,4 +1,5 @@
 /* Role: Object Oriented CSS role is to separate contents form container */
+/* the __ is for elements inside the block and the -- is for modifiers or some specific action, state or behaviour on the block or element */
 
 /* mobile version */
 /* identify global colors of project */
@@ -24,6 +25,13 @@
 html {
   /* 62.5% of 16px = 10px */
   font-size: 62.5%;
+}
+
+/* role of container size  */
+.container {
+  max-width: 1140px;
+  /* vertical is 0 and auto: horizontal will equally spread the container  */
+  margin: 0 auto;
 }
 
 body {
@@ -623,3 +631,45 @@ transform: rotate(0);
 max-height: 100vh;
 opacity: 1;
 }
+
+/* Blocks */
+.block {
+  /* Now --padding-vertical is available for block class element and 
+  all it children */
+  --padding-vertical: 6rem;
+  /* use padding vertical */
+  padding: var(--padding-vertical) 2rem;
+}
+
+/* add new class to not text-align all block class elements */
+.block__header {
+text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: black;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: white;
+}
+
+.block--skewed-right {
+  /* an we can use padding vertical here as well since it's a child of block */
+  /* calc() function allow us to add 4rem to original size which equal to 10rem */
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+  /* an we can use padding vertical here as well since it's a child of block */
+  /* calc() function allow us to add 4rem to original size which equal to 10rem */
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
