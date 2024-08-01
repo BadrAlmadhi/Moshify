@@ -1,3 +1,5 @@
+/* Role: Object Oriented CSS role is to separate contents form container */
+
 /* mobile version */
 /* identify global colors of project */
 :root {
@@ -272,6 +274,11 @@ a {
   color: white;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .btn--block {
   /* fill entire place */
   width: 100%;
@@ -462,7 +469,7 @@ a {
 
 .quote__organization {
   color: var(--color-headings);
-  opacity: .4;
+  opacity: 0.4;
   font-size: 2rem;
 }
 
@@ -521,4 +528,61 @@ a {
   top: 3rem;
   /* in mine style of icon-container we have hight and wdith of 62 dvide by 2 give us 32 */
   right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.callout__heading {
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  /* property we apply for grid items  */
+  /* horizontal  (X)*/
+  justify-self: center;
+  /* vertical (Y)*/
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--cols-2 {
+    /* this will add all extra space to the first columns and the second will fit the button only */
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    /* when using grid use this property to control horizontal side of a grid */
+    justify-self: start;
+    margin: 0 2rem;
+  }
 }
