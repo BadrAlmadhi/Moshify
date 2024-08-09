@@ -376,12 +376,20 @@ a {
   background: #02cdf1;
 }
 
+.card--primary .badge--primary {
+  background-color: #126de4;
+}
+
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: white;
 }
 
 /* Plans */
+.plan {
+  /* when hover transition happen smoothly */
+  transition: transform 0.2s ease-out;
+}
 
 .plan__name {
   color: white;
@@ -411,6 +419,11 @@ a {
   margin-top: 2rem;
 }
 
+.plan--popular {
+  /* increase cards size */
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -422,6 +435,16 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  /* increase size when hover */
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  /* since main card is large we need to give it larger number */
+  transform: scale(1.15);
 }
 
 /* font adjustment */
@@ -773,7 +796,6 @@ a {
   }
 }
 
-
 /* Domain Block */
 
 .block--domain .input-group {
@@ -799,4 +821,17 @@ a {
     /* This calculate grid items equally when adding and removing  */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plans Block */
+.block-plans .grid {
+  /* increase gap: row and  column*/
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  /* this works like a media query */
+  max-width: 500px;
+  /* center card in middle */
+  margin: 0 auto;
 }
