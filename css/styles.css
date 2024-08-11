@@ -247,7 +247,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -346,6 +346,7 @@ a {
   /* use flex-grow to allow input take over the entire space */
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 /* control buttons inside input group */
@@ -568,7 +569,6 @@ a {
   position: relative;
 }
 
-/* direct drive selector to target the image  */
 .testimonial__image > img {
   width: 100%;
 }
@@ -815,8 +815,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(2, 3fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
