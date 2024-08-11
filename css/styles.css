@@ -686,6 +686,7 @@ a {
 /* add new class to not text-align all block class elements */
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
